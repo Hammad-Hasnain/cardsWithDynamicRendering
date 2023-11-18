@@ -1,0 +1,12 @@
+.backToCards {
+    background-color: transparent;
+    border: none;
+    margin: 15px 8px;
+    cursor: pointer;
+
+}
+
+.backToCards:hover {
+    color: #ff4500;
+
+}

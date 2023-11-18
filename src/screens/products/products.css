@@ -1,0 +1,34 @@
+.cardCol {
+    flex-direction: column !important;
+    gap: 15px;
+}
+
+
+.cardRow {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+
+.card-view-btns {
+    border: none;
+    background-color: #ef0d0d;
+    color: whitesmoke;
+    border-radius: 8px;
+    padding: 8px;
+    cursor: pointer;
+
+}
+
+.card-view-btn-active {
+    border: none;
+    background-color: white;
+    color: #ef0d0d;
+    border-radius: 8px;
+    padding: 8px;
+    cursor: pointer;
+
+}
