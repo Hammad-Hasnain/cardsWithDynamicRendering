@@ -83,11 +83,12 @@ const Products = () => {
                                 rate={e.rating.rate}
                                 count={e.rating.count}
                                 cardView={cardView}
-                                navigationHandler={()=>navigationHandler(e.id)} />
-                            <CardBtn price={e.price} cardView={cardView} />
+                                navigationHandler={() => navigationHandler(e.id)} />
+                            <CardBtn price={e.price} cardView={cardView}
+                                navigationHandler={() => navigationHandler(e.id)} />
 
                         </Stack>
-                    }) : <Typography variant="h3">Loading..........</Typography>
+                    }) : <Typography variant="h3" sx={{ border: '2px solid red' }}>Loading..........</Typography>
                 }
             </Stack>
 

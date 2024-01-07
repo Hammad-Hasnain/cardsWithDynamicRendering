@@ -1,9 +1,9 @@
 import { Stack } from '@mui/material'
 import './cardBtn.css'
 
-const CardBtn = ({ price }) => <div>
+const CardBtn = ({ price, navigationHandler }) => <div>
     <Stack direction={'row'} justifyContent={'end'} sx={{ marginTop: 2 }}>
-        <button className='buy-btn' >{price}$ Buy </button>
+        <button className='buy-btn' onClick={navigationHandler}>{price}$ Buy </button>
     </Stack>
 </div>
 

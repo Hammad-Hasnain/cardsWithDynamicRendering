@@ -7,6 +7,15 @@
 }
 
 .backToCards:hover {
-    color: #ff4500;
+    /* color: #ff4500; */
+    color: #ff4500d9;
 
+}
+
+.product-detail-box span {
+
+
+    color: #000000b5;
+    font-style: italic;
+    font-size: 22px;
 }
