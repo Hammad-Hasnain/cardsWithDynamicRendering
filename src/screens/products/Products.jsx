@@ -1,4 +1,4 @@
-import { Stack, Typography } from "@mui/material"
+import { Box, Stack, Typography } from "@mui/material"
 import axios from "axios"
 import { useEffect, useState } from "react"
 import ViewAgendaIcon from '@mui/icons-material/ViewAgenda';
@@ -46,13 +46,29 @@ const Products = () => {
 
     return (
         <div >
-            <Stack direction={'row'} justifyContent={'end'} margin={2}>
-                <button onClick={cardViewRow} className={cardView ? 'card-view-btn-active' : 'card-view-btns'}>
-                    <ViewAgendaIcon />
-                </button>
-                <button onClick={cardViewCol} className={cardView ? 'card-view-btns' : 'card-view-btn-active'}>
-                    <ViewModuleIcon />
-                </button>
+            <Stack direction={'row'} justifyContent={'end'} margin={2}
+                sx={{
+                    boxShadow: '0 1px 10px #000000a1', m: 0, p: 1,
+                    height: {
+                        xs: '25px ',
+                        sm: 'auto ',
+                        md: 'auto'
+                    }
+                }}>
+                <Box sx={{
+                    display: {
+                        xs: 'none ',
+                        sm: 'flex ',
+                        md: 'flex'
+                    }
+                }}>
+                    <button onClick={cardViewRow} className={cardView ? 'card-view-btn-active' : 'card-view-btns'}>
+                        <ViewAgendaIcon />
+                    </button>
+                    <button onClick={cardViewCol} className={cardView ? 'card-view-btns' : 'card-view-btn-active'}>
+                        <ViewModuleIcon />
+                    </button>
+                </Box>
             </Stack>
 
             <Stack className={cardView ? 'cardRow' : 'cardCol'} sx={{ p: 2 }}>
@@ -63,12 +79,12 @@ const Products = () => {
                             {
                                 maxWidth: { xs: '100%', sm: '400px', md: '350px', lg: '350px', xl: '350px' },
                                 borderRadius: '8px',
-                                boxShadow: '4px 4px 10px #000',
+                                boxShadow: '4px 4px 10px #000000a1',
                                 p: 1,
 
                             }
                             : {
-                                width: '100%',
+                                // width: '100%',
                                 p: 2, borderRadius: '8px',
                                 boxShadow: '4px 4px 10px #000',
                             }}>
@@ -84,11 +100,14 @@ const Products = () => {
                                 count={e.rating.count}
                                 cardView={cardView}
                                 navigationHandler={() => navigationHandler(e.id)} />
-                            <CardBtn price={e.price} cardView={cardView}
-                                navigationHandler={() => navigationHandler(e.id)} />
-
+                            <Box sx={{ height: '4em', }}>
+                                <CardBtn price={e.price} cardView={cardView}
+                                    navigationHandler={() => navigationHandler(e.id)} />
+                            </Box>
                         </Stack>
-                    }) : <Typography variant="h3" sx={{ border: '2px solid red' }}>Loading..........</Typography>
+                    }) : <Typography variant="h3" >Loading..........
+                        <img src="https://i.gifer.com/ZZ5H.gif" alt="" width={'40px'} />
+                    </Typography>
                 }
             </Stack>
 

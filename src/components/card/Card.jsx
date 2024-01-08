@@ -13,7 +13,6 @@ const Card = ({ image, id, title, description, rate, count, cardView, navigation
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
-                width: '100%',
                 p: 2
             }}>
 
@@ -21,7 +20,7 @@ const Card = ({ image, id, title, description, rate, count, cardView, navigation
                     <Typography variant='h5'> {id}.{title}</Typography>
                     : <Typography variant='h5'>{id}.{cardView ? title.slice(0, 15) : title}{cardView && <b onClick={navigationHandler} style={{ cursor: 'pointer' }}>...</b>}  </Typography>}
 
-                <Typography>{cardView ? description.slice(0, 90) : description}
+                <Typography >{cardView ? description.slice(0, 95) : description}
                     {cardView && <b onClick={navigationHandler} style={{ cursor: 'pointer' }} >...</b>} </Typography>
                 <Typography ><b>Rating: {rate} </b> </Typography>
                 <Typography ><b>Count: {count}</b> </Typography>

@@ -15,7 +15,7 @@
 
 .card-view-btns {
     border: none;
-    background-color: #ef0d0d;
+    background-color: #ff4500d9;
     color: whitesmoke;
     border-radius: 8px;
     padding: 8px;
@@ -26,7 +26,7 @@
 .card-view-btn-active {
     border: none;
     background-color: white;
-    color: #ef0d0d;
+    color: #ff4500d9;
     border-radius: 8px;
     padding: 8px;
     cursor: pointer;
